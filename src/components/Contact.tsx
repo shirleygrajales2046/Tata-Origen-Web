@@ -1,3 +1,5 @@
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
+
 function Contact() {
     return (
     <section className="contact">
@@ -14,7 +16,8 @@ function Contact() {
         target="_blank"
         rel="noopener noreferrer"
         >
-        💬 WhatsApp
+        <FaWhatsapp />
+        WhatsApp
         </a>
 
         <a
@@ -22,7 +25,8 @@ function Contact() {
         target="_blank"
         rel="noopener noreferrer"
         >
-        📸 Instagram
+        <FaInstagram />
+        Instagram
         </a>
     </div>
     </section>

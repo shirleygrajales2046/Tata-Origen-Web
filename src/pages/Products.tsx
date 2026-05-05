@@ -5,10 +5,12 @@ import GalletasChips from "../assets/GalletasChipChoco.jpeg";
 import Postres from "../assets/postres.jpeg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 function Products() {
     return (
@@ -22,13 +24,24 @@ function Products() {
             </p>
 
             <Swiper
-                modules={[Pagination]}
+                modules={[Navigation as any, Pagination as any, Autoplay as any]}
                 spaceBetween={20}
-                slidesPerView={1.2}
+                slidesPerView={1}
+                centeredSlides={true}
+                loop={true}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                navigation
                 pagination={{ clickable: true }}
                 breakpoints={{
-                    640: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 },
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    },
                 }}
             >
 
