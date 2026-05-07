@@ -25,9 +25,7 @@ function Products() {
 
             <Swiper
                 modules={[Navigation as any, Pagination as any, Autoplay as any]}
-                spaceBetween={20}
-                slidesPerView={1}
-                centeredSlides={true}
+                spaceBetween={24}
                 loop={true}
                 autoplay={{
                     delay: 2500,
@@ -35,7 +33,12 @@ function Products() {
                 }}
                 navigation
                 pagination={{ clickable: true }}
+                centeredSlides={false}
+                slidesPerView={1}
                 breakpoints={{
+                    640: {
+                        slidesPerView: 1,
+                    },
                     768: {
                         slidesPerView: 2,
                     },
