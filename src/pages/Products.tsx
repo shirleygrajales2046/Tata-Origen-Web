@@ -1,6 +1,6 @@
 import ProductCard from "../components/ProductCard";
 import tatafiesta from "../assets/GalletasTataFiesta.jpeg";
-import alfajores from "../assets/Alfajores.jpeg";
+import alfajores from "../assets/alfajores.jpeg";
 import GalletasChips from "../assets/GalletasChipChoco.jpeg";
 import Postres from "../assets/postres.jpeg";
 
