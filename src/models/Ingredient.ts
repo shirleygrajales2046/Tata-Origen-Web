@@ -3,5 +3,6 @@ export interface Ingredient {
     name: string;
     purchasePrice: number;
     purchaseQuantity: number;
-    unit: "Gr" | "Kg" | "ml" | "L" | "Unidad";
+    purchaseUnit: "Gr" | "Kg" | "ml" | "L" | "Unidad";
+    supplier?: string;
 }

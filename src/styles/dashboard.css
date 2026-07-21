@@ -34,3 +34,311 @@
     color:#5a3d7a;
     margin-bottom:10px;
 }
+
+.dashboard-layout{
+    display:grid;
+    grid-template-columns:250px 1fr;
+    min-height:100vh;
+}
+
+.sidebar{
+
+    background:#5a3d7a;
+    color:white;
+    padding:30px;
+
+}
+
+.sidebar h2{
+
+    margin-bottom:35px;
+
+}
+
+.sidebar nav{
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+}
+
+.sidebar a{
+
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    border-radius:10px;
+    transition:.25s;
+
+}
+
+.sidebar a:hover{
+
+    background:rgba(255,255,255,.12);
+
+}
+
+.dashboard-content{
+
+    padding:40px;
+
+    background:#f7f3ee;
+
+}
+
+.products-page{
+    max-width:900px;
+    margin:auto;
+}
+
+.product-form{
+    margin-top:30px;
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.product-form input,
+.product-form textarea,
+.product-form select{
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:15px;
+}
+
+.product-form textarea{
+    resize:none;
+    min-height:90px;
+}
+
+.product-form button{
+    width:200px;
+}
+
+.product-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:40px;
+
+    background:white;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+}
+
+.product-table th{
+
+    background:#5a3d7a;
+
+    color:white;
+
+    padding:16px;
+
+}
+
+.product-table td{
+
+    padding:16px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.product-table tr:hover{
+
+    background:#faf7ff;
+
+}
+
+.ingredients-card{
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.ingredients-card h2{
+    margin-bottom:20px;
+}
+
+.ingredients-card table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.ingredients-card th{
+    background:#5a3d7a;
+    color:white;
+    padding:14px;
+}
+
+.ingredients-card td{
+    padding:14px;
+    border-bottom:1px solid #ececec;
+    text-align:center;
+}
+
+.add-button{
+    margin-bottom:20px;
+}
+
+/* ===== INGREDIENTES ===== */
+
+.recipes-page{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.recipes-header h1{
+    color:#5a3d7a;
+    margin-bottom:10px;
+}
+
+.recipes-grid{
+    display:grid;
+    grid-template-columns:340px 1fr;
+    gap:30px;
+    align-items:start;
+}
+
+.recipe-form{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.recipe-form input,
+.recipe-form select{
+
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    font-size:15px;
+
+}
+
+.recipe-form button{
+    margin-top:10px;
+}
+
+.ingredients-card{
+
+    overflow-x:auto;
+
+}
+
+.ingredients-card table{
+
+    min-width:700px;
+
+}
+
+@media (max-width:900px){
+
+    .recipes-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* HOME DASHBOARD */
+
+.dashboard-home{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.dashboard-home h1{
+
+    color:#5a3d7a;
+
+}
+
+.dashboard-home p{
+
+    color:#777;
+
+    margin-bottom:30px;
+
+}
+
+.dashboard-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.dashboard-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.25s;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.dashboard-card svg{
+
+    font-size:35px;
+
+    color:#5a3d7a;
+
+}
+
+.dashboard-card h3{
+
+    margin-top:18px;
+
+}
+
+.dashboard-card span{
+
+    display:block;
+
+    margin-top:15px;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#5a3d7a;
+
+}

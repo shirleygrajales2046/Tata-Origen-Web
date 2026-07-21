@@ -1,31 +1,37 @@
 import {Routes, Route} from "react-router-dom";
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import DashboardLayout from "./components/layouts/DashboardLayout";
+import PublicLayout from "./components/layouts/PublicLayout";
 
 import Home from "./pages/Home";
 import Dashboard from "./pages/dashboard/Dashboard";
-import Recipes from "./pages/dashboard/Recipes";
-
-function PublicLayout(){
-  return(
-    <>
-      <Header />
-      <Home />
-      <Footer />
-    </>
-  );
-}
+import ProductsPage from "./pages/dashboard/products/ProductsPage";
+import RecipesPage from "./pages/dashboard/recipes/RecipesPage";
 
 function App() {
   return (
-    <Routes>
+      <Routes>
+        {/* Página pública */}
+        <Route element={<PublicLayout />}>
+          <Route path="/" element={<Home />} />
+        </Route>
 
-      <Route path="/" element={<PublicLayout />} />
-      <Route path="/admin" element={<Dashboard />} />
-      <Route path="/dashboard/recipes" element={<Recipes />} />
+        {/* Dashboard */}
+        <Route path="/dashboard" element={<DashboardLayout />}>
 
-    </Routes>
+          <Route index element={<Dashboard />} />
+
+          <Route
+            path="productos"
+            element={<ProductsPage />}
+          />
+
+          <Route
+            path="ingredientes"
+            element={<RecipesPage />}
+          />
+        </Route>
+      </Routes>
   );
 }
 
